@@ -1,0 +1,3 @@
+{
+    "streamProducer" : [ { "input" : "Uniq-OpStationList-NetworkStation.txt" } ]
+}

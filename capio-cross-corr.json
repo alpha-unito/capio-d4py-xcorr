@@ -1,0 +1,30 @@
+{
+  "name": "tc_cross_corr",
+  "IO_Graph": [
+    {
+      "name": "prep",
+      "input_stream": [],
+      "output_stream": [
+            "./OUTPUT/DATA/2018-10-02T06:00:00.000/*"],
+      "streaming": [
+        {
+          "dirname": [
+                "./OUTPUT/DATA/2018-10-02T06:00:00.000/*"],
+          "committed": "on_close",
+          "mode": "no_update"
+        }]
+    },{
+      "name": "xcorr",
+      "input_stream": [
+            "./OUTPUT/DATA/2018-10-02T06:00:00.000/*"],
+      "output_stream": ["./OUTPUT/XCORR*"],
+      "streaming": [
+        {
+          "dirname": ["./OUTPUT/XCORR*"],
+          "committed": "on_close",
+          "mode": "no_update"
+        }
+      ]
+    }
+  ]
+}
