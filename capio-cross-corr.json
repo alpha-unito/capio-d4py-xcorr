@@ -5,26 +5,33 @@
       "name": "prep",
       "input_stream": [],
       "output_stream": [
-            "./OUTPUT/DATA/2018-10-02T06:00:00.000/*"],
+        "./OUTPUT/DATA/2018*/*"
+      ],
       "streaming": [
         {
           "dirname": [
-                "./OUTPUT/DATA/2018-10-02T06:00:00.000/*"],
-          "committed": "on_close",
-          "mode": "no_update",
-          "n_files": 130
-        }]
-    },{
+            "./OUTPUT/DATA/2018*/*"
+          ],
+          "committed": "n_files:130",
+          "mode": "no_update"
+        }
+      ]
+    },
+    {
       "name": "xcorr",
       "input_stream": [
-            "./OUTPUT/DATA/2018-10-02T06:00:00.000/*"],
-      "output_stream": ["./OUTPUT/XCORR*"],
+        "./OUTPUT/DATA/2018*/*"
+      ],
+      "output_stream": [
+        "./OUTPUT/XCORR*"
+      ],
       "streaming": [
         {
-          "dirname": ["./OUTPUT/XCORR*"],
-          "committed": "on_close",
-          "mode": "no_update",
-          "n_files": 33800
+          "dirname": [
+            "./OUTPUT/XCORR*"
+          ],
+          "committed": "n_files:33800",
+          "mode": "no_update"
         }
       ]
     }
